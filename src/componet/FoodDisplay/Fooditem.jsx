@@ -35,7 +35,7 @@ function Fooditem({id,name,price, description,image}) {
       <div >
       <p className='text-[#676767]' >{description}</p>
       {/* food-item-price */}
-      <p className='text-[tomato] text-[22px] font-[500] mt-[10px] mb-[0px]'>${price}</p>
+      <p className='text-[tomato] text-[22px]  mt-[10px] mb-[0px] font-extrabold'> ₹ {price}</p>
       </div>
      
       </div>

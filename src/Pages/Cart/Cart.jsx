@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../../Context/Storecontext";
 import { food_list } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
@@ -6,11 +6,16 @@ import { useNavigate } from "react-router-dom";
 function Cart() {
   const { cartItems, getTotalCart, setCartItems, addToCart, removefromCart } =
     useContext(StoreContext);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+     useEffect(() => {
+        localStorage.setItem("totalPtice", JSON.stringify(cartItems));
+        
+      }, []);
   return (
     <>
       {/* Cart */}
-      <div className="mt-[100px]">
+      <div className="mt-[120px]">
         {/* Cart-items */}
         <div>
           {/* cart-item-title */}
@@ -33,10 +38,10 @@ function Cart() {
                     <img src={item.image} alt="" className="w-[50px]" />
 
                     <p>{item.name} </p>
-                    <p>${item.price}</p>
+                    <p> ₹{item.price}</p>
                     <p>{cartItems[item._id]}</p>
-                    <p>${item.price * cartItems[item._id]}</p>
-                    <p onClick={()=>{removefromCart(item._id)}} className="cursor-pointer">x</p>
+                    <p> ₹{item.price * cartItems[item._id]}</p>
+                    <p onClick={()=>{removefromCart(item._id)}} className="cursor-pointer text-[tomato] text-[29px]">x</p>
                   </div>
                   <hr className="h-[1px] bg-[#e2e2e2]" />
                 </div>
@@ -53,17 +58,17 @@ function Cart() {
               {/* cart-total-details */}
               <div className="flex justify-between text-[#555]">
                 <p>Subtotal</p>
-                <p>${getTotalCart()}</p>
+                <p> ₹{getTotalCart()}</p>
               </div>
               <hr className="my-[10px] mx-[0px]" />
               <div  className="flex justify-between text-[#555]">
                 <p>Delivery Fee</p>
-                <p>${getTotalCart()===0?0:2}</p>
+                <p> ₹{getTotalCart()===0?0:20}</p>
               </div>
               <hr className="my-[10px] mx-[0px]" />
               <div  className="flex justify-between text-[#555] ">
                 <p className="font-bold">Total</p>
-                <p className="font-bold">${getTotalCart()===0?0:getTotalCart()+2}</p>
+                <p className="font-bold"> ₹{getTotalCart()===0?0:getTotalCart()+20}</p>
               </div>
               
             </div>

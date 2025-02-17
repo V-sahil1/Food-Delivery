@@ -4,6 +4,7 @@ import { useEffect } from "react";
 export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
+  
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -11,6 +12,7 @@ const StoreContextProvider = (props) => {
     } else {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
+
   };
   const removefromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
@@ -35,7 +37,7 @@ const StoreContextProvider = (props) => {
     getTotalCart
   };
   useEffect(() => {
-    console.log(cartItems);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
   return (
     <StoreContext.Provider value={contextValue}>

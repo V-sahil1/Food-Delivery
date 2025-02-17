@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
+import Loging from "./Loging";
+
 
 function Logingpopup({ setShowlogin }) {
   const [currState, setCurrState] = useState("Login");
   return (
     <>
       {/* login-popup */}
-      <div className="absolute z-1 w-full h-full bg-[#00000090] grid ">
+      <div className="absolute z-[9999999] w-full h-full bg-[#00000090] grid ">
         {/* login-popup-container */}
         <form className="place-self-center text-[#808080] bg-white flex flex-col gap-[25px] py-[25px] px-[30px] rounded-[8px] text-[14px] animatio " >
           {/* login-popup-title */}
@@ -19,15 +21,10 @@ function Logingpopup({ setShowlogin }) {
             />
           </div>
           {/* login-popup-inputs */}
-          <div className=" grid gap-[20px]  ">
-            {currState==="Login"?<></>:<input type="text" placeholder="Your Name" required className="outline-none p-[10px] border border-[#c9c9c9]
-            rounded-[4px]" />}
-            
-            <input type="email" placeholder="Your email" required  className="outline-none p-[10px] border border-[#c9c9c9]
-            rounded-[4px]"/>
-            <input type="password" placeholder="password" required  className="outline-none p-[10px] border border-[#c9c9c9]
-            rounded-[4px] "/>
-          </div>
+          
+          <Loging />
+          
+          
           <button className="border-none p-[10px]  rounded-[4px] text-[white] bg-[tomato] text-[15px] cursor-pointer">{currState==="Sign Up"?"Create account":"Login"}</button>
           {/* login-popup-condition */}
           <div className="flex justify-center items-start gap-[8px] mt-[-15px] " >

@@ -11,6 +11,8 @@ import Logingpopup from "./componet/Logging-popup/Logingpopup";
 import FoodDisplay from "./Context/FoodDisplay";
 import Fooditem from "./componet/FoodDisplay/Fooditem";
 import Privacy from "./componet/privacy/Privacy";
+import Loging from "./componet/Logging-popup/Loging";
+import Contactus from "./componet/contact/Contactus";
 
 function App() {
   const[showLogin,setShowlogin]=useState(false)
@@ -22,9 +24,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/order" element={<Placeorder />}
+          <Route path="order" element={<Placeorder />}
            />
            <Route path="/menu" element={<FoodDisplay/>}
+           />
+           <Route path="/contact-us" element={<Contactus/>}
            />
             <Route path="/privacy-policy" element={<Privacy/>}
            />
