@@ -65,7 +65,7 @@ function Placeorder() {
             <input type="text" className="i" placeholder="Country" name="Country" required />
           </div>
           <input type="text" className="i" placeholder="Phone" name="Phone" required />
-          <button className="w-[100%] font-semibold h-[30px] border bg-[tomato]">Submit</button>
+          <button className="w-[100%] font-[400] h-[50px] border bg-[tomato] rounded-[4px] text-[white] text-[20px] ">Submit</button>
           </div>
         </div>
         {/* place-order-right */}
@@ -94,10 +94,10 @@ function Placeorder() {
            
           </div>
         </div>
-        <button></button>
+        
       </form>
       <button
-              className="absolute md:right-[23%] xl:right-[27.9%] top-[51%] bottom-[-] border-none text-[white] bg-[tomato] w-[max(15vw,200px)] py-[12px] px-[0px] rounded-[4px] cursor-pointer mt-[30px]"
+              className="absolute sm:right-[23%]  xl:right-[27.9%] top-[40%] border-none text-[white] bg-[tomato] w-[max(15vw,200px)] py-[12px] px-[0px] rounded-[4px] cursor-pointer mt-[30px]"
               onClick={handlePayment}
             >
               PROCEED TO PAYMENT

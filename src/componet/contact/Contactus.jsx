@@ -48,7 +48,7 @@ function Contactus() {
                     <label className='mb-[10px]' >Your Message</label>
                     <input type="text" placeholder='Type Your Message' required className='w-[500px] px-[2px] pb-[70px] h-[100px] border'  name='message' />
                 </div>
-                <button className='w-[100%] bg-[tomato] h-[35px] border ml-[20px] font-bold' >Submit</button>
+                <button className='w-[100%] bg-[tomato] h-[45px] border ml-[20px] font-[450] text-[20px] text-[white]' >Submit</button>
 
             </form>
         </section>

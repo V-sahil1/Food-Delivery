@@ -10,7 +10,7 @@ function Navbar({setShowlogin}) {
   const {getTotalCart} =useContext(StoreContext)
   return (
     <>
-    <div className='flex px-[20px] top-[0%] mx-[-6px]    items-center justify-between   h-[100px]  fixed bg-[white] w-full  z-[999] shadow-xl ' id ='navbar'>
+    <div className='flex px-[20px] top-[0%] mx-[-150px]    items-center justify-between   h-[100px]  fixed bg-[white] w-full  z-[999] shadow-xl ' id ='navbar'>
  
         <img src={assets.logo} alt=""  className='xl:w-[150px] logo'/>
         <div className='hidden md:flex'>
