@@ -31,10 +31,10 @@ function Footer() {
 
             </div>
             <div className=" mt-[2px]">
-            <a className="pr-[20px] ml-[9px]" href="https://www.facebook.com/" >
+            <a className="pr-[20px] ml-[9px]" href="https://www.facebook.com/"  target="_blank" >
                   fb</a>
-                <a className="mx-[20px] mt-[]"  href="https://x.com/?lang=en" >
-                X</a><a className="mx-[3px]" href="https://www.linkedin.com/feed/" >
+                <a className="mx-[20px] mt-[]"  href="https://x.com/?lang=en"  target="_blank" >
+                X</a><a className="mx-[3px]" href="https://www.linkedin.com/feed/"  target="_blank" >
                 Linkedin</a>
             </div>
              
@@ -44,7 +44,7 @@ function Footer() {
             <h2 className="font-bold text-[20px] text-[white]">COMPANY</h2>
             <ul className="" >
               
-              <a href="#navbar" className="mt-[10px] cursor-pointer">Home</a>
+              <a href="/" className="mt-[10px] cursor-pointer">Home</a>
              
                
                 <li className="mt-[10px] cursor-pointer">About us</li>

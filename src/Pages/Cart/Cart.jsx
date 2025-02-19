@@ -15,7 +15,7 @@ function Cart() {
   return (
     <>
       {/* Cart */}
-      <div className="mt-[120px]">
+      <div className="mt-[150px]">
         {/* Cart-items */}
         <div>
           {/* cart-item-title */}
