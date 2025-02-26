@@ -110,7 +110,7 @@ function Placeorder() {
               Scan QR Code to Pay  ₹{getActualPrice === 0 ? 0 : getTotalCart() + 20}
             </h2>
             <QRCodeSVG
-              value={`upi://pay?pa=vardekarsahil34@okaxis&pn=VARDEKARSAHIL&am=${getActualPrice === 0 ? 0 : getTotalCart() + 20}&cu=INR&tn=Tomato`}
+              value={`upi://pay?pa=tomato1256@upi&pn=sahil&am=${getActualPrice === 0 ? 0 : getTotalCart() + 20}&cu=INR&tn=Tomato`}
             />
 
             <button
